@@ -1,6 +1,6 @@
 #! /bin/bash
 yum update -y
-amazon-linux-extras install nginx1
+amazon-linux-extras install nginx1 -y
 # get private ip address of ec2 instance using instance metadata
 TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"` \
 && PRIVATE_IP=`curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/local-ipv4`
@@ -28,8 +28,9 @@ echo "<html>
     <center><img src="ryu.png" alt="This is the Demo of LoadBalancer Listerner Port Forwarding"</center>
 </body>
 </html>" > /usr/share/nginx/html/index.html
-cd /etc/nginx
-rm /etc/nginx/nginx.conf
-wget ${FOLDER}/website-1/nginx.conf
+# cd /etc/nginx
+# rm /etc/nginx/nginx.conf
+# wget ${FOLDER}/website-1/nginx.conf
+# chmod 644 /etc/nginx/nginx.conf
 systemctl restart nginx
 systemctl enable nginx
