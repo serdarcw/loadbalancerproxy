@@ -21,7 +21,6 @@ echo "<html>
 </head>
 <body>
     <h1>Testing Application Load Balancer with GUILE</h1>
-    <h3>This web server is launched from the launch template by YOUR_NAME</h3>
     <p>This instance is created at <b>$DATE_TIME</b></p>
     <p>Private IP address of this instance is <b>$PRIVATE_IP</b></p>
     <p>Public IP address of this instance is <b>$PUBLIC_IP</b></p>
@@ -29,5 +28,8 @@ echo "<html>
     <center><img src="guile.jpeg" alt="This is the Demo of LoadBalancer Listerner Port Forwarding"</center>
 </body>
 </html>" > /usr/share/nginx/html/index.html
+cd /etc/nginx
+rm /etc/nginx/nginx.conf
+wget ${FOLDER}/website-3/nginx.conf
 systemctl restart nginx
 systemctl enable nginx
