@@ -28,7 +28,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ryu-service
+                name: ryu-myservice
                 port: 
                   number: 3000
     - host: ken.clarusway.us
@@ -38,7 +38,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ken-service
+                name: ken-myservice
                 port: 
                   number: 4000
     - host: guile.clarusway.us
@@ -48,6 +48,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: guile-service
+                name: guile-myservice
                 port: 
                   number: 5000
