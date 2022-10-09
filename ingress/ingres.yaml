@@ -15,7 +15,7 @@ metadata:
     alb.ingress.kubernetes.io/healthy-threshold-count: '2'
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
     # To use certificate add annotations below.
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:046402772087:certificate/dae75cd6-8d82-420c-bed1-1ea132ec3d37
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:046402772087:certificate/f872f3db-ba9d-46df-8c6a-9d165036e8ee
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: '443'
 
