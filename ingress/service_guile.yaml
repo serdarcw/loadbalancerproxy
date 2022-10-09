@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: guile
+  name: guile-myservice
+spec:
+  ports:
+  - name: nginx
+    port: 5000
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: guile
+  sessionAffinity: None
+  type: NodePort

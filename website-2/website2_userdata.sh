@@ -28,8 +28,8 @@ echo "<html>
     <center><img src="ken.png" alt="This is the Demo of LoadBalancer Listerner Port Forwarding"</center>
 </body>
 </html>" > /usr/share/nginx/html/index.html
-cd /etc/nginx
-rm /etc/nginx/nginx.conf
-wget ${FOLDER}/website-2/nginx.conf
+# cd /etc/nginx
+# rm /etc/nginx/nginx.conf
+# wget ${FOLDER}/website-2/nginx.conf
 systemctl restart nginx
 systemctl enable nginx

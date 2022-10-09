@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ryu-deployment
+spec:
+  selector:
+    matchLabels:
+      app: ryu
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: ryu
+    spec:
+      containers:
+      - name: nginx
+        image: docker.io/serkangumus06/nginx:ryu
+        ports:
+        - containerPort: 80

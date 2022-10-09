@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ken
+  name: ken-myservice
+spec:
+  ports:
+  - name: nginx
+    port: 4000
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: ken
+  sessionAffinity: None
+  type: NodePort

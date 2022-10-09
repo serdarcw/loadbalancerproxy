@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ken-deployment
+spec:
+  selector:
+    matchLabels:
+      app: ken
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: ken
+    spec:
+      containers:
+      - name: nginx
+        image: docker.io/serkangumus06/nginx:ken
+        ports:
+        - containerPort: 80
